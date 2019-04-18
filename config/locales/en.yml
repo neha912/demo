@@ -28,6 +28,48 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: "Please provide a valid email address."
+              taken: "This email address is already associated with  account. If you forgot your password, please click 'Forgot password?' on the LOG IN screen."
+
+        register_user:
+          attributes:
+            email:
+              email_verifier:
+                email_not_real: "Please provide valid email address."
+                out_of_mail_server: "Please provide valid email address."
+                no_mail_server: "Please provide valid email address."
+                failure: "Please provide valid email address."
+                exception: "Please provide valid email address."
+en:
+  controllers:
+    users:
+      create:
+        success: "Successfully Registered."
+      show:
+        success: "Successfully Show User."
+        failure: "Please check entered id does not match our records.."
+      index:
+        success: "Successfully Show All User."
+      update:
+        success: "Successfully saved user profile!"
+        failure: "Leave it blank if you don't want to change"
+
+    sessions:
+      create:
+        success: "Successfully logged in."
+        input_failure: "The email and password you entered does not match our records."
+      destroy:
+        success: "You have been logged out o."
+        failure: "Please login to processed further."
+
+
+

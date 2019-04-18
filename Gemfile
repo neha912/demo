@@ -26,6 +26,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rosebud'
+#api json renderer
+gem 'fast_jsonapi'
+#dynamic messages api
+gem 'i18n_lazy_scope'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

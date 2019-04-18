@@ -1,16 +1,8 @@
 <div class="col-md-8">
-	<% if @user == current_user %>
-        <%= render 'user_show_feed' %>
-        <%#= will_paginate @user.posts %>
-        <ul>
-                <% current_user.requested_friendships.each do |request| %>
-                <li>
-                        <%= request.user_name %>
-                        <%= link_to "Accept",  friendship_path(id: request.id), method: "put" %>
-                        <%= link_to "Decline", friendship_path(id: request.id), method: :delete %>
-                </li>
-              <% end %>
-            </ul>
-        <%= render 'user_post', post: @post %>
+	<% if current_user.present? %>
+    <p>Email : <%= current_user.email %></p>
+    <p>First Name : <%= current_user.first_name %></p>
+    <p>Last Name : <%= current_user.last_name  %></p>
+    <p> Profile Picture : <%= image_tag current_user.profile_image.url %></p>
 	<% end %>
 </div>
